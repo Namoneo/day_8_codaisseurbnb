@@ -1,5 +1,6 @@
 class Room < ApplicationRecord
   belongs_to :user, dependent: :destroy
+  has_and_belongs_to_many :themes
 
   validates :home_type, presence: true
   validates :room_type, presence: true
@@ -9,4 +10,5 @@ class Room < ApplicationRecord
   validates :listing_name, presence: true, length: {maximum: 50}
   validates :description, presence: true, length: {maximum: 500}
   validates :address, presence: true
+
 end
