@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :rooms
 
   resources :profiles, only: [:new, :edit, :create, :update]
+  resources :photos
 
 end
